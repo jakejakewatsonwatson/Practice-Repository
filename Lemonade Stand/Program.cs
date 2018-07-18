@@ -23,15 +23,7 @@ namespace ConsoleApp15
             int CostOfProduction = Int32.Parse(strCostOfProduction);
             int totalSpentOnSupplies = Inventory * CostOfProduction;
             int totalRevenue = Inventory * PricePerCup;
-            int profit = 0;
-
-            for(int i = 0; i < Inventory; i++)
-            {
-                profit += PricePerCup;
-            
-            }
-
-            int totalProfit = profit - totalSpentOnSupplies;
+            int totalProfit = totalRevenue - totalSpentOnSupplies;
             
             Console.WriteLine($"{nameOfStand} brought in ${totalProfit} in profit, while spending ${totalSpentOnSupplies} on supplies and generated ${totalRevenue} in total revenue");
             
