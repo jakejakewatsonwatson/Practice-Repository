@@ -25,21 +25,16 @@ namespace ConsoleApp15
             int totalRevenue = Inventory * PricePerCup;
             int profit = 0;
 
-            for(int i = 0; i < Inventory + 1; i += PricePerCup)
+            for(int i = 0; i < Inventory; i++)
             {
                 profit += PricePerCup;
             
             }
 
             int totalProfit = profit - totalSpentOnSupplies;
-
-
-
-
+            
             Console.WriteLine($"{nameOfStand} brought in ${totalProfit} in profit, while spending ${totalSpentOnSupplies} on supplies and generated ${totalRevenue} in total revenue");
-
-
-
+            
             Console.ReadLine();
         }
             
