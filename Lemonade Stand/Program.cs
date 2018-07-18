@@ -14,10 +14,19 @@ namespace ConsoleApp15
 
             Console.WriteLine("How much does each cup of lemonade cost?");
             var PricePerCup = Console.ReadLine();
-            
+
+            Console.WriteLine("How much does each cup cost for you to make? (cost of sugar, water, lemons, etc)?");
+            var CostOfProduction = Console.ReadLine();
 
 
 
+
+
+            Console.WriteLine($"You brought in {0} in profit, while spending {0} on supplies and generated {0} in total revenue");
+
+
+
+            Console.ReadLine();
         }
             
     }
