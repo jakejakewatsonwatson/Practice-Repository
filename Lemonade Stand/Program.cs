@@ -10,19 +10,33 @@ namespace ConsoleApp15
             string nameOfStand = Console.ReadLine();
 
             Console.WriteLine("How many cups do you plan on selling?");
-            var Inventory = Console.ReadLine();
+            string strInventory = Console.ReadLine();
 
             Console.WriteLine("How much does each cup of lemonade cost?");
-            var PricePerCup = Console.ReadLine();
+            string strPricePerCup = Console.ReadLine();
 
             Console.WriteLine("How much does each cup cost for you to make? (cost of sugar, water, lemons, etc)?");
-            var CostOfProduction = Console.ReadLine();
+            string strCostOfProduction = Console.ReadLine();
+
+            int Inventory = Int32.Parse(strInventory);
+            int PricePerCup = Int32.Parse(strPricePerCup);
+            int CostOfProduction = Int32.Parse(strCostOfProduction);
+            int totalSpentOnSupplies = Inventory * CostOfProduction;
+            int totalRevenue = Inventory * PricePerCup;
+            int profit = 0;
+
+            for(int i = 0; i < Inventory + 1; i += PricePerCup)
+            {
+                profit += PricePerCup;
+            
+            }
+
+            int totalProfit = profit - totalSpentOnSupplies;
 
 
 
 
-
-            Console.WriteLine($"You brought in {0} in profit, while spending {0} on supplies and generated {0} in total revenue");
+            Console.WriteLine($"{nameOfStand} brought in ${totalProfit} in profit, while spending ${totalSpentOnSupplies} on supplies and generated ${totalRevenue} in total revenue");
 
 
 
