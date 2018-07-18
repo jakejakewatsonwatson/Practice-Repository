@@ -1,12 +1,25 @@
 ﻿using System;
 
-namespace Lemonade_Stand
+namespace ConsoleApp15
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("What would you like to name your lemonade stand?");
+            string nameOfStand = Console.ReadLine();
+
+
+
+
+
         }
+            
     }
 }
+
+
+
+    
+
+
