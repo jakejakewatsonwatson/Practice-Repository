@@ -6,6 +6,8 @@ namespace ConsoleApp15
     {
         static void Main(string[] args)
         {
+            string stand1 = new LemonadeStands();
+
             Console.WriteLine("What would you like to name your lemonade stand?");
             string nameOfStand = Console.ReadLine();
 
@@ -18,12 +20,12 @@ namespace ConsoleApp15
             Console.WriteLine("How much does each cup cost for you to make? (cost of sugar, water, lemons, etc)?");
             string strCostOfProduction = Console.ReadLine();
 
-            int Inventory = Int32.Parse(strInventory);
-            int PricePerCup = Int32.Parse(strPricePerCup);
-            int CostOfProduction = Int32.Parse(strCostOfProduction);
-            int totalSpentOnSupplies = Inventory * CostOfProduction;
-            int totalRevenue = Inventory * PricePerCup;
-            int totalProfit = totalRevenue - totalSpentOnSupplies;
+            decimal Inventory = Int32.Parse(strInventory);
+            decimal PricePerCup = Int32.Parse(strPricePerCup);
+            decimal CostOfProduction = Int32.Parse(strCostOfProduction);
+            decimal totalSpentOnSupplies = Inventory * CostOfProduction;
+            decimal totalRevenue = Inventory * PricePerCup;
+            decimal totalProfit = totalRevenue - totalSpentOnSupplies;
             
             Console.WriteLine($"{nameOfStand} brought in ${totalProfit} in profit, while spending ${totalSpentOnSupplies} on supplies and generated ${totalRevenue} in total revenue");
             
