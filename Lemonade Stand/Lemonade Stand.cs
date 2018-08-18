@@ -8,17 +8,12 @@ namespace ConsoleApp15
     {
         public string nameOfStand { get; set; }
         public string strInventory { get; set; } 
-        public string strPricePerCup { get; set; }
+        public decimal PricePerCup { get; set; }
         public string strCostOfProduction { get; set; }
         
         public decimal Inventory()
         {
-            return Int32.Parse(strInventory);
-        }
-
-        public decimal PricePerCup()
-        {
-            return Int32.Parse(strPricePerCup);
+            return decimal.Parse(strInventory);
         }
 
         public decimal CostOfProduction()
@@ -33,7 +28,7 @@ namespace ConsoleApp15
 
         public decimal TotalRevenue()
         {
-            return Inventory() * PricePerCup();
+            return Inventory() * PricePerCup;
         }
 
         public decimal TotalProfit()

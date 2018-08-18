@@ -9,9 +9,7 @@ namespace ConsoleApp15
         {
             List<Stand> stands = new List<Stand>();
 
-            Console.WriteLine("How many lemonade stands would you like to open this summer?");
-            string strNumberOfStands = Console.ReadLine();
-            decimal numberOfStands = Int32.Parse(strNumberOfStands);
+            int numberOfStands = UI.GetUserIntegerInput("How many lemonade stands would you like to open this summer?");
 
             for (int i = 0; i < numberOfStands; i++)
             {
@@ -25,7 +23,7 @@ namespace ConsoleApp15
                 stand.strInventory = Console.ReadLine();
 
                 Console.WriteLine("How much does each cup of lemonade cost at this location?");
-                stand.strPricePerCup = Console.ReadLine();
+                stand.PricePerCup = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("How much does each cup cost for you to make? (cost of sugar, water, lemons, etc)?");
                 stand.strCostOfProduction = Console.ReadLine();
