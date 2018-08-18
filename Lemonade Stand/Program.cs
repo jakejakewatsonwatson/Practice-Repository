@@ -25,7 +25,7 @@ namespace ConsoleApp15
                 stand.strInventory = Console.ReadLine();
 
                 Console.WriteLine("How much does each cup of lemonade cost at this location?");
-                stand.strPricePerCup = Console.ReadLine();
+                stand.PricePerCup = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("How much does each cup cost for you to make? (cost of sugar, water, lemons, etc)?");
                 stand.strCostOfProduction = Console.ReadLine();
