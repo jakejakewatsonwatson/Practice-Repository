@@ -9,9 +9,7 @@ namespace ConsoleApp15
         {
             List<Stand> stands = new List<Stand>();
 
-            Console.WriteLine("How many lemonade stands would you like to open this summer?");
-            string strNumberOfStands = Console.ReadLine();
-            decimal numberOfStands = Int32.Parse(strNumberOfStands);
+            int numberOfStands = UI.GetUserIntegerInput("How many lemonade stands would you like to open this summer?");
 
             for (int i = 0; i < numberOfStands; i++)
             {
