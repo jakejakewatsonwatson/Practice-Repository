@@ -13,7 +13,7 @@ namespace ConsoleApp15
         
         public decimal Inventory()
         {
-            return Int32.Parse(strInventory);
+            return decimal.Parse(strInventory);
         }
 
         public decimal CostOfProduction()
